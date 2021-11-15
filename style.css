@@ -45,20 +45,20 @@ section article {
   font-style: normal;
   position: relative;
 }
-.heading h1 em ::after {
+.heading h1 em:after {
   position: absolute;
-  content: url(img/pic-01.jpg);
-  right: -30px;
-  top:-25;
+  content: url(images/logo-kakao.png);
+  right: -10px;
+  top:-27px;
 }
-/* .content {} */
+.content {}
 .content > div {
   width: 50%;
   float: left;
   height: 400px;
   box-sizing: border-box;
 }
-/* .accordion {} */
+.accordion {}
 .title {
   border: 1px solid #ddd;
   padding: 5px;
