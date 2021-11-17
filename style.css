@@ -1,101 +1,77 @@
-/* Google Web Fonts CDN */
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+  /* Web Fonts : Lato */
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
-/* FontAwesome CDN 4.7 */
-@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+  /* FontAwesome 4.7 CDN */
+  @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
-body {
-  font-family: 'Noto Sans KR', sans-serif;
-  color: #222;
-  margin: 0;
-  font-weight: 300;
-}
-a {
-  text-decoration: none;
-  color: #222;
-}
-h1,h2,h3,h4,h5,h6 {
-  font-weight: normal;
-}
-
-/* Layout */
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-section article {
-  width: 980px;
-  height: 500px;
-}
-.heading {
-  text-align: center;
-}
-.heading span {
-  color: #9E7356;
-  font-size: 20px;
-  font-weight: bolder;
-}
-.heading h1 {
-  font-size: 36px;
-  margin-top: 10px;
-}
-.heading h1 em {
-  font-style: normal;
-  position: relative;
-}
-.heading h1 em:after {
-  position: absolute;
-  content: url(images/logo-kakao.png);
-  right: -10px;
-  top:-27px;
-}
-.content {}
-.content > div {
-  width: 50%;
-  float: left;
-  height: 400px;
-  box-sizing: border-box;
-}
-.accordion {}
-.title {
-  border: 1px solid #ddd;
-  padding: 5px;
-  border-radius: 3px;
-  cursor: pointer;
-  padding-left: 15px;
-  transition: 0.3s;
-  margin-bottom: 10px;
-}
-.title:after {
-  content: '\f105';
-  font-family: fontawesome;
-  float: right;
-  margin-right: 5px;
-  margin-top: 3px;
-  transition: 0.3s;
-}
-.title.active:after {
-  transform: rotate(90deg);
-  color: #F9E3C7;
-}
-.title:hover,
-.title.active {
-  background-color: #734F2E;
-  color: #fff;
-}
-.image {
-  text-align: right;
-}
-.image img {
-  height: 350px;
-  box-shadow: 10px 5px 5px #F7F7E5;
-}
-.desc {
-  padding: 15px;
-  display: none;
-}
-.desc.active {
-  display: block;
-}
+  body {
+    font-family: 'Lato',sans-serif;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5em;
+  }
+  .price-inner {
+    background-color: #eee;
+    width: 300px;
+    min-height: 500px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .price-inner h3 {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .title {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  .title:after {
+    content: "\f107";
+    font-family: fontawesome;
+    float: right;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .title.active:after {
+    transform: rotate(180deg);
+    background-color: crimson;
+  }
+  .content {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0 10px;
+    display: none;
+    margin-bottom: 5px;
+  }
+  .content span {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0; 
+  }
+  .content span:last-child {
+    border: none;
+  }
+  .content span em {
+    font-style: normal;
+    background-color: yellowgreen;
+    color: #fff;
+    padding: 1px 7px;
+    border-radius: 3px;
+    float: right;
+  }

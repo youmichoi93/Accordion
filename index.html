@@ -4,64 +4,73 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Blake's accordion</title>
-    <!-- jQuery CDN -->
+    <!-- JQUERY CDN -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-
-    <section>
-      <article>
-      <div class="heading">
-        <span>오케스트라</span>
-        <h1><em>오케스트라</em>는 현악, 관악, 타악의 모든 악기군을 포함하는, 클래식 음악의 <b>가장 큰 기악 합주</b>형태를 말합니다</h1>
-      </div>
-      <div class="content">
-        <div class="accordion">
-          <div class="title active" data-image="images/pic-01.jpg">
-          오케스트라 규모
-          </div>
-          <div class="desc active">
-            악단 규모는 흔히 목관악기 개수로 가늠합니다.<br><br>
-            예를 들어 플루트와 클라리넷, 오보에 등이 2개씩이면 ‘2관 편성 오케스트라’, 4개씩이면 ‘4관 편성 오케스트라’입니다. 인원이 50명 미만일 경우에는 ‘체임버오케스트라’라고 부릅니다.<br><br>
-          </div>
-           <div class="title" data-image="images/pic-02.jpg">
-           챔버 오케스트라
-          </div>
-          <div class="desc">
-            챔버는 방이란 뜻입니다. 즉 챔버 오케스트라는 방에서 공연할 수 있을 정도로 적은 인원의 오케스트라입니다. 적게는 10명, 많게는 30명 정도로 구성됩니다.<br><br>
-          </div>
-          <div class="title" data-image="images/pic-03.jpg">
-          심포니와 필하모닉
-          </div>
-          <div class="desc">
-           심포니와 필하모닉은 가장 쉽게 들을 수 있는 명칭인데요, 기원에는 차이가 있지만 현재는 거의 비슷하게 사용됩니다. 가장 큰 규모의 오케스트라인데요,적게는 30명, 많게는 100명까지로 구성됩니다.<br><br>둘은 유래가 다릅니다. 심포니는 특정 단체나 기관이 설립한 오케스트라이고, 필하모닉은 후원자들의 후원을 받아 만들어진 오케스트라죠. 하지만 현재 후원으로만 운영되는 오케스트라는 거의 없다고 봐도 무방한 실정입니다.<br><br>
-          </div>
-           <div class="title" data-image="images/pic-04.jpg">
-          팝스 오케스트라
-          </div>
-          <div class="desc">
-            팝스 오케스트라는 이름이 주는 느낌 그대로입니다. 팝이나 영화 음악 등, 대중들이 좀 더 쉽게 즐길 수 있는 레퍼토리를 연주합니다. 클래식과 대중 간 사이를 더 좁히는 역할을 합니다.<br><br>
+    
+    <div class="price-inner">
+      <h3>Market</h3>
+      <div class="items">
+        <div class="item">
+          <div class="title active">Total Points</div>
+          <div class="content">
+          <span>Nateland fizprice <em>$3.45</em></span>
+          <span>Nateland fizprice <em>$3.45</em></span>
+          <span>Nateland fizprice <em>$3.45</em></span>
+          <span>Nateland fizprice <em>$3.45</em></span>
           </div>
         </div>
-        <div class="image">
-          <img src="images/pic-01.jpg">
+       <div class="item">
+         <div class="title">Total Points</div>
+         <div class="content">
+          <span>Nateland fizprice <em>$3.45</em></span>
+          <span>Nateland fizprice <em>$3.45</em></span>
+          <span>Nateland fizprice <em>$3.45</em></span>
+          <span>Nateland fizprice <em>$3.45</em></span>
         </div>
+       </div>
+       <div class="item">
+         <div class="title">Total Points</div>
+         <div class="content">
+          <span>Nateland fizprice <em>$3.45</em></span>
+          <span>Nateland fizprice <em>$3.45</em></span>
+          <span>Nateland fizprice <em>$3.45</em></span>
+          <span>Nateland fizprice <em>$3.45</em></span>
+        </div>
+       </div>
+       <div class="item">
+         <div class="title">Total Points</div>
+         <div class="content">
+          <span>Nateland fizprice <em>$3.45</em></span>
+          <span>Nateland fizprice <em>$3.45</em></span>
+          <span>Nateland fizprice <em>$3.45</em></span>
+          <span>Nateland fizprice <em>$3.45</em></span>
+        </div>
+       </div>
+       <div class="item">
+         <div class="title">Total Points</div>
+         <div class="content">
+          <span>Nateland fizprice <em>$3.45</em></span>
+          <span>Nateland fizprice <em>$3.45</em></span>
+          <span>Nateland fizprice <em>$3.45</em></span>
+          <span>Nateland fizprice <em>$3.45</em></span>
+        </div>
+       </div>
       </div>
-     </article>
-    </section>
+     </div>
 
-    <script>
-      $('.title').click(function(){
-        $(this).addClass('active')
-        $(this).siblings('.title').removeClass('active')
-        $(this).siblings('.desc').stop().slideUp()
-        $(this).next().stop().slideDown()
+     <script>
+       $('.item:nth-of-type(1) .content').show()
+       $('.title').click(function(){
+         $(this).parent('.item').siblings('.item').children('.content').slideUp()
+         $(this).next().slideDown()
 
-        var dataImage = $(this).attr('data-image')
-        $('.image img').attr('src', dataImage)
-      })
-    </script>   
-
+         $(this).parent('.item').siblings('.item').children('.title').removeClass('active')
+         $(this).addClass('active')
+       })
+     </script>
+  
   </body>
 </html>
