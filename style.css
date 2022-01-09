@@ -1,4 +1,4 @@
-  /* Web Fonts : Lato */
+   /* Web Fonts : Lato */
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
   /* FontAwesome 4.7 CDN */
@@ -11,7 +11,8 @@
     line-height: 1.5em;
   }
   .price-inner {
-    background-color: #eee;
+    background-image: url(/a.jpg);
+    /* background-color: #eee; */
     width: 300px;
     min-height: 500px;
     border-radius: 10px;
@@ -23,9 +24,12 @@
     box-sizing: border-box;
   }
   .price-inner h3 {
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
     margin: 0;
     margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
   }
   .title {
     background-color: #fff;
@@ -69,8 +73,8 @@
   }
   .content span em {
     font-style: normal;
-    background-color: yellowgreen;
-    color: #fff;
+    background-color: rgba(190, 205, 50, 0.247);
+    color: black;
     padding: 1px 7px;
     border-radius: 3px;
     float: right;
